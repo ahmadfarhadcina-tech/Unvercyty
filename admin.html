@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="fa" dir="rtl" data-theme="dark">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0b2340">
+  <title>پنل مدیریت آزمایشی | سامانه نتایج کانکور</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="hero-slides" aria-hidden="true">
+    <div class="hero-slide slide-one active"></div>
+    <div class="hero-slide slide-two"></div>
+    <div class="hero-slide slide-three"></div>
+  </div>
+  <div class="page-shade" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html" aria-label="صفحه اصلی">
+      <span class="brand-mark" aria-hidden="true">ک</span>
+      <span class="brand-copy"><strong>سامانه نتایج کانکور</strong><small>پنل مدیریت اطلاعات آزمایشی</small></span>
+    </a>
+    <nav class="top-nav" aria-label="منوی اصلی"><a href="index.html">صفحهٔ جستجو</a><a href="admin.html">پنل مدیریت</a></nav>
+    <div class="header-actions">
+      <span class="demo-pill"><i></i> نسخهٔ آزمایشی</span>
+      <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر حالت روشن و تاریک" title="تغییر حالت روشن و تاریک"><span id="theme-icon" aria-hidden="true">☀</span><span id="theme-label">حالت روشن</span></button>
+    </div>
+  </header>
+  <main class="admin-main">
+    <section class="admin-intro">
+      <div class="eyebrow"><span class="eyebrow-line"></span> مدیریت پرونده‌های داوطلبان</div>
+      <h1>پنل مدیریت <span>نتایج کانکور</span></h1>
+      <p>از این صفحه پروندهٔ داوطلب بساز، ویرایش کن یا حذف کن. پس از ذخیره، از صفحهٔ اصلی با آیدی داوطلب جستجو کن و روی پرونده کلیک کن تا تمام معلومات ثبت‌شده نمایش داده شود.</p>
+    </section>
+    <div class="admin-layout">
+      <section class="admin-card">
+        <h2 id="admin-form-title">ثبت داوطلب جدید</h2>
+        <p class="subcopy">آیدی داوطلب باید یکتا باشد. برای ویرایش، پرونده را از فهرست سمت دیگر انتخاب کن.</p>
+        <form id="candidate-form">
+          <div class="admin-form-grid">
+            <div class="admin-field"><label for="candidate-id">آیدی داوطلب *</label><input id="candidate-id" name="id" required maxlength="50" autocomplete="off" placeholder="مثلاً K-1405-001"></div>
+            <div class="admin-field"><label for="candidate-name">نام و نام خانوادگی *</label><input id="candidate-name" name="name" required maxlength="120" placeholder="نام کامل داوطلب"></div>
+            <div class="admin-field"><label for="father-name">نام پدر</label><input id="father-name" name="fatherName" maxlength="120"></div>
+            <div class="admin-field"><label for="grandfather-name">نام پدرکلان</label><input id="grandfather-name" name="grandfatherName" maxlength="120"></div>
+            <div class="admin-field"><label for="province">ولایت</label><input id="province" name="province" maxlength="80" placeholder="مثلاً کابل"></div>
+            <div class="admin-field"><label for="district">ولسوالی / ناحیه</label><input id="district" name="district" maxlength="100"></div>
+            <div class="admin-field"><label for="school">نام مکتب</label><input id="school" name="school" maxlength="160"></div>
+            <div class="admin-field"><label for="graduation-year">سال فراغت</label><input id="graduation-year" name="graduationYear" maxlength="20" placeholder="مثلاً ۱۴۰۴"></div>
+            <div class="admin-field"><label for="field">رشتهٔ موردنظر</label><input id="field" name="field" maxlength="120" placeholder="مثلاً طب معالجوی"></div>
+            <div class="admin-field"><label for="score">نمره</label><input id="score" name="score" maxlength="30" placeholder="نمرهٔ آزمایشی یا رسمی"></div>
+            <div class="admin-field"><label for="university">دانشگاه / پوهنتون</label><input id="university" name="university" maxlength="160"></div>
+            <div class="admin-field"><label for="admitted-program">رشتهٔ قبولی</label><input id="admitted-program" name="admittedProgram" maxlength="160"></div>
+            <div class="admin-field"><label for="status">وضعیت</label><select id="status" name="status"><option value="ثبت آزمایشی">ثبت آزمایشی</option><option value="قبول شده">قبول شده</option><option value="ناکام">ناکام</option><option value="در انتظار نتیجه">در انتظار نتیجه</option></select></div>
+            <div class="admin-field full"><label for="notes">یادداشت اضافی</label><textarea id="notes" name="notes" maxlength="1000" placeholder="هر معلومات اضافی که می‌خواهی در پرونده نشان داده شود"></textarea></div>
+          </div>
+          <div class="admin-actions">
+            <button class="admin-button" type="submit" id="save-candidate">ذخیرهٔ داوطلب</button>
+            <button class="admin-button secondary" type="button" id="reset-form">فرم تازه</button>
+            <button class="admin-button secondary" type="button" id="export-data">گرفتن نسخهٔ پشتیبان JSON</button>
+          </div>
+          <div id="admin-message" class="admin-message" role="status" aria-live="polite" hidden></div>
+        </form>
+        <div class="admin-warning">هشدار: این پنل فقط آزمایشی است و رمز عبور یا امنیت مدیریتی واقعی ندارد. اطلاعات در LocalStorage همین مرورگر ذخیره می‌شود؛ برای اطلاعات واقعی و شخصی از آن استفاده نکن.</div>
+      </section>
+      <aside class="admin-card">
+        <h2>پرونده‌های ثبت‌شده <span id="candidate-count">(۰)</span></h2>
+        <p class="subcopy">برای ویرایش یا حذف، یکی از پرونده‌ها را انتخاب کن. آیدی‌های تکراری مجاز نیستند.</p>
+        <div id="candidate-list" class="admin-list"></div>
+      </aside>
+    </div>
+  </main>
+  <footer><span>سامانهٔ آزمایشی بررسی نتایج کانکور افغانستان</span><span><a href="index.html">بازگشت به صفحهٔ جستجو</a> · وب‌سایت رسمی ادارهٔ کانکور نیست.</span></footer>
+  <script src="admin.js"></script>
+</body>
+</html>
