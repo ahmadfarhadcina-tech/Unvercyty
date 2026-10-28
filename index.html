@@ -41,7 +41,7 @@
       <a href="#check">بررسی نتیجه</a><a href="#steps">راهنما</a><a href="admin.html">پنل مدیریت</a>
     </nav>
     <div class="header-actions">
-      <span class="demo-pill"><i></i> نسخهٔ آزمایشی</span>
+      <span class="demo-pill"><i></i> Live</span>
       <button class="theme-toggle" id="theme-toggle" type="button" aria-label="تغییر حالت روشن و تاریک" title="تغییر حالت روشن و تاریک"><span id="theme-icon" aria-hidden="true">☀</span><span id="theme-label">حالت روشن</span></button>
     </div>
   </header>
@@ -61,12 +61,12 @@
           <div><h2 id="form-title">جستجوی نتیجه</h2><p>آیدی داوطلب را وارد کنید تا پروندهٔ ثبت‌شده را پیدا کنید.</p></div>
         </div>
         <form id="result-form" novalidate>
-          <label for="candidate-id">شمارهٔ داوطلبی</label>
+          <label for="candidate-id">ID تان را بنویسید 👇</label>
           <div class="input-row">
             <input id="candidate-id" name="candidate-id" type="text" inputmode="numeric" autocomplete="off" placeholder="مثلاً: ۱۴۰۵۱۲۳۴۵" maxlength="30" aria-describedby="id-help">
             <button class="search-button" type="submit"><span>جستجوی نتیجه</span><b aria-hidden="true">←</b></button>
           </div>
-          <p id="id-help" class="field-help">شماره را مطابق کارت کانکور وارد کنید.</p>
+          <p id="id-help" class="field-help">ID را مطابق کارت کانکور وارد کنید.</p>
           <div id="form-message" class="form-message" role="status" aria-live="polite" hidden></div>
           <div id="search-result" class="search-result" hidden></div>
           <section id="candidate-details" class="candidate-details" hidden aria-live="polite"></section>
